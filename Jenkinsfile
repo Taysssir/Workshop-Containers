@@ -5,7 +5,7 @@ pipeline {
         docker { image 'node:14-alpine' }
     }
    tools {
-      docker "Docker"
+      docker "docker"
     }
     stages {
         stage('Test') {
