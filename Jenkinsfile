@@ -36,7 +36,7 @@ pipeline {
             steps{
                 echo "verify"
                 //sh "curl http://localhost:3000/" 
-                sh "https://www.google.com/"
+                sh "curl -L http://www.google.com"
             
             }
         }
