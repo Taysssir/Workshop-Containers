@@ -8,10 +8,11 @@ pipeline {
                 sh 'node --version'
             }
         }
-     stage ("cloning") {
+    stage ("cloning") {
         steps{
             echo "cloning"
            sh "git clone https://github.com/contentful/the-example-app.nodejs.git"
+        }
         }
     }
 }
