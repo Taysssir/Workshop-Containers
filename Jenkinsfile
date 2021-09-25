@@ -35,8 +35,8 @@ pipeline {
         stage ("Test"){
             steps{
                 echo "verify"
-                //sh "curl http://localhost:3000/" 
-                sh "curl -L http://www.google.com"
+                sh "curl  -L http://localhost:3000" 
+                //sh "curl -L http://www.google.com" : works fine
             
             }
         }
