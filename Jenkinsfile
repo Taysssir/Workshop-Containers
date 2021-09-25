@@ -3,16 +3,18 @@ pipeline {
         docker { image 'node:14-alpine' }
     }
     stages {
-        stage('Test') {
+        stage('Node Version') {
             steps {
                 sh 'node --version'
             }
         }
-    stage ("cloning") {
-        steps{
-            echo "cloning"
-           sh "git clone https://github.com/contentful/the-example-app.nodejs.git"
-        }
+        stage('Git Version') {
+            agent {
+                docker { image 'alpine/git:v2.30.2' }
+                }
+            steps {
+                sh 'git --version'
+            }
         }
     }
 }
