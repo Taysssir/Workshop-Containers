@@ -21,8 +21,8 @@ pipeline {
             steps{
                 echo "installing dependencies"
                 sh 'npm cache clean --force'
-                sh 'chown -R 126:130 "/.npm"'
-                sh "npm i npm@latest -g"
+                //sh 'chown -R 126:130 "/.npm"'
+                //sh "npm i npm@latest -g"
                 sh "cd the-example-app.nodejs && npm install"
             }
         }
