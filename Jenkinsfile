@@ -12,7 +12,7 @@ pipeline {
         stage ("cloning") {
             steps{
                 echo "cloning"
-               sh "git clone https://github.com/contentful/the-example-app.nodejs.git"
+               //sh "git clone https://github.com/contentful/the-example-app.nodejs.git"
             }
         }
         stage ("Install dependenciess"){
